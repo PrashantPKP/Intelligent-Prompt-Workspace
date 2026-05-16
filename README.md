@@ -78,17 +78,6 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the app.
-
-### Environment Variables
-
-| Variable | Required | Description |
-|---|---|---|
-| `GROQ_API_KEY_1` | ✅ Yes | Your primary Groq API key |
-| `GROQ_API_KEY_2` … `GROQ_API_KEY_12` | ❌ Optional | Additional keys for automatic rotation & rate-limit handling |
-
-> **Note:** You can add up to 12 API keys. The app automatically rotates through them when rate limits are hit.
-
 ---
 
 ## 🎯 How It Works
