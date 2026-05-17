@@ -1,0 +1,72 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 0 24px;
+  transition: var(--transition-base);
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logoImage {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-base);
+}
+
+.logoImage:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  background: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(81, 207, 102, 0.4);
+}
+
+@media (max-width: 600px) {
+  .headerInner {
+    height: 56px;
+  }
+
+  .logoImage {
+    height: 30px;
+  }
+
+  .tagline {
+    display: none;
+  }
+}

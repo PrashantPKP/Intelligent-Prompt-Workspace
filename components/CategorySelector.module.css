@@ -1,0 +1,67 @@
+.wrapper {
+  margin-bottom: 8px;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--gray-200);
+  background: var(--bg-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--primary-300);
+  background: var(--primary-50);
+  color: var(--primary-700);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.chipActive {
+  border-color: var(--primary-400);
+  background: linear-gradient(135deg, var(--primary-50), rgba(92, 124, 250, 0.08));
+  color: var(--primary-700);
+  box-shadow: 0 2px 8px rgba(92, 124, 250, 0.15);
+}
+
+.chipEmoji {
+  font-size: 15px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    gap: 6px;
+  }
+
+  .chip {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
